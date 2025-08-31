@@ -16,6 +16,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { AIMoodAnalyzer } from "@/components/ai-mood-analyzer";
 import { AIInsights } from "@/components/ai-insights";
 import { AIRecommendations } from "@/components/ai-recommendations";
+import { Heart, Calendar, Clock, Brain, Lightbulb, RefreshCw } from "lucide-react";
 
 const moods = [
   { id: "happy", emoji: "😊", name: "Happy" },
@@ -94,7 +95,7 @@ export default function MoodTracker() {
     const d = new Date(date);
     const now = new Date();
     const diffInHours = Math.floor((now.getTime() - d.getTime()) / (1000 * 60 * 60));
-    
+
     if (diffInHours < 1) {
       return "Just now";
     } else if (diffInHours < 24) {
@@ -156,7 +157,7 @@ export default function MoodTracker() {
           <Card className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 transition-colors duration-300">
             <CardContent className="p-8">
               <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6">How are you feeling today?</h2>
-              
+
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 {/* Name Input */}
                 <div>
@@ -235,7 +236,7 @@ export default function MoodTracker() {
           <Card className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 transition-colors duration-300">
             <CardContent className="p-8">
               <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6">Your Vibe History</h2>
-              
+
               {isLoading ? (
                 <div className="space-y-4">
                   {[...Array(3)].map((_, i) => (
