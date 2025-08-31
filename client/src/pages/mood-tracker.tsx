@@ -13,6 +13,9 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest, queryClient } from "@/lib/queryClient";
 import { insertMoodEntrySchema, type MoodEntry } from "@shared/schema";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { AIMoodAnalyzer } from "@/components/ai-mood-analyzer";
+import { AIInsights } from "@/components/ai-insights";
+import { AIRecommendations } from "@/components/ai-recommendations";
 
 const moods = [
   { id: "happy", emoji: "😊", name: "Happy" },
@@ -134,6 +137,19 @@ export default function MoodTracker() {
             Track your daily moods and reflect on your emotional journey. Select your current vibe and optionally add a note.
           </p>
         </header>
+
+        {/* AI Features Section */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6 text-center">AI-Powered Features</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <AIMoodAnalyzer onMoodSuggested={handleMoodSelect} />
+            <AIInsights />
+            <AIRecommendations 
+              currentMood={selectedMood ? moods.find(m => m.id === selectedMood)?.name : undefined}
+              currentNote={form.watch("note")}
+            />
+          </div>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Mood Tracker Form */}
