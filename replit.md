@@ -2,6 +2,46 @@
 
 This is a mood tracking web application built with React and Express. The application allows users to log their daily moods with emojis and optional notes, providing a simple interface for emotional self-monitoring. Users can select from predefined mood options (happy, sad, excited, calm, etc.) and view their mood history over time.
 
+# Core Directory Tree
+
+```
+DailyVibes/
+├── client/                     # Frontend React application
+│   ├── src/
+│   │   ├── components/         # Reusable React components
+│   │   │   ├── ui/            # shadcn/ui component library
+│   │   │   ├── ai-insights.tsx       # AI mood pattern analysis
+│   │   │   ├── ai-recommendations.tsx # AI wellness suggestions
+│   │   │   ├── theme-provider.tsx    # Dark/light mode context
+│   │   │   └── theme-toggle.tsx      # Theme switch component
+│   │   ├── hooks/             # Custom React hooks
+│   │   ├── lib/               # Utility libraries
+│   │   │   ├── queryClient.ts # TanStack Query configuration
+│   │   │   └── utils.ts       # Helper functions
+│   │   ├── pages/             # Application pages/routes
+│   │   │   ├── mood-tracker.tsx      # Main mood logging interface
+│   │   │   └── not-found.tsx         # 404 error page
+│   │   ├── App.tsx            # Root application component
+│   │   ├── index.css          # Global styles and Tailwind
+│   │   └── main.tsx           # React app entry point
+│   └── index.html             # HTML template
+├── server/                     # Backend Express.js API
+│   ├── ai-service.ts          # DeepSeek API integration
+│   ├── index.ts               # Express server setup
+│   ├── routes.ts              # API route definitions
+│   ├── storage.ts             # Data persistence layer
+│   └── vite.ts                # Development server integration
+├── shared/                     # Shared TypeScript types
+│   └── schema.ts              # Zod validation schemas
+├── examples/                   # Usage examples
+│   └── deepseek-coding-assistant.js  # DeepSeek API demo
+├── package.json               # Node.js dependencies
+├── vite.config.ts             # Vite build configuration
+├── tailwind.config.ts         # Tailwind CSS configuration
+├── tsconfig.json              # TypeScript configuration
+└── replit.md                  # Project documentation
+```
+
 # User Preferences
 
 Preferred communication style: Simple, everyday language.  
