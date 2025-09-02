@@ -1,1 +1,1 @@
-import { RefreshCw } from "lucide-react";
+import { RefreshCw, Lightbulb, Sparkles } from "lucide-react";

@@ -13,6 +13,9 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest, queryClient } from "@/lib/queryClient";
 import { insertMoodEntrySchema, type MoodEntry } from "@shared/schema";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { AIMoodAnalyzer } from "@/components/ai-mood-analyzer";
+import { AIInsights } from "@/components/ai-insights";
+import { AIRecommendations } from "@/components/ai-recommendations";
 
 const moods = [
   { id: "happy", emoji: "😊", name: "Happy" },

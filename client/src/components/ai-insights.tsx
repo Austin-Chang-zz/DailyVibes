@@ -1,1 +1,1 @@
-import { RefreshCw } from "lucide-react";
+import { RefreshCw, Brain, TrendingUp } from "lucide-react";
