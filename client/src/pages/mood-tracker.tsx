@@ -16,7 +16,6 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { AIMoodAnalyzer } from "@/components/ai-mood-analyzer";
 import { AIInsights } from "@/components/ai-insights";
 import { AIRecommendations } from "@/components/ai-recommendations";
-import { Heart, Calendar, Clock, Brain, Lightbulb, RefreshCw } from "lucide-react";
 
 const moods = [
   { id: "happy", emoji: "😊", name: "Happy" },
